@@ -1,10 +1,10 @@
 from fastapi import FastAPI, Depends, HTTPException
-from app.schemas import SchemaItem, SchemaItemCreate
+from schemas import SchemaItem, SchemaItemCreate
 from typing import List
 from sqlalchemy.orm import Session
-from app.database import get_db, engine
-from app.crud import get_items, get_item, create_item
-from app.models import Base
+from database import get_db, engine
+from crud import get_items, get_item, create_item
+from models import Base
 
 Base.metadata.create_all(bind=engine)
 
